@@ -1,0 +1,239 @@
+body {
+  background-color: #1e2a47; /* Koyu mavi tonları */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.app-container {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hafif bir gölge */
+  border-radius: 10px;
+  background-color: #2c3e50;
+  width: 550px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Zorluk Seviyesi Kutusu */
+#level-box {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#level-box {
+  display: none;
+}
+
+#level-box.active {
+  display: block;
+}
+
+#level-box .btn-level {
+  margin: 10px;
+  width: 150px;
+}
+
+#quiz-box #header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.option-list {
+  padding: 18px 10px;
+}
+
+.option-list .option {
+  border: 1px solid #151d3b;
+  border-radius: 5px;
+  padding: 8px 15px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.option-list .option:hover {
+  color: #112b2c;
+  background: #ffd33d;
+}
+
+.option-list .option.correct {
+  color: #155724;
+  background: #d4edda;
+}
+
+.option-list .option.incorrect {
+  color: #e74c3c;
+  background: #f8d7da;
+}
+
+.option-list .option.disabled {
+  pointer-events: none;
+}
+
+.summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* score box */
+#score-box {
+  text-align: center;
+  padding: 30px;
+}
+
+#score-box i {
+  font-size: 90px;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+#score-box .score-text {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+#button-box {
+  text-align: center;
+}
+
+#button-box,
+#quiz-box,
+#score-box {
+  display: none;
+}
+
+#button-box.active,
+#quiz-box.active,
+#score-box.active {
+  display: block;
+}
+
+/* kalan süre */
+.time {
+  display: flex;
+  align-items: center;
+  background: #155724;
+  color: #fff;
+  padding: 5px;
+  border-radius: 3px;
+  font-size: 15px;
+}
+
+.time .time-text {
+  font-size: 14px;
+}
+
+.time .time-second {
+  background: #ffd33d;
+  border-radius: 3px;
+  padding: 3px;
+  margin-left: 3px;
+  width: 25px;
+  text-align: center;
+}
+
+.btn-next {
+  opacity: 0;
+
+  transform: scale(0.8);
+  transition: all 0.3s ease;
+}
+
+.btn-next.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.time-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  background: #f39c12;
+}
+/* Zorluk Seviyesi Başlığı ve Butonları */
+h4.text-center {
+  color: #ffd33d;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.btn-level {
+  background-color: #f39c12;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 15px 30px;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-level:hover {
+  background-color: #e67e22;
+}
+
+.btn-level:focus {
+  outline: none; /* Focus efektini kaldır */
+  box-shadow: 0 0 5px #f39c12; /* Buton odaklandığında parlak sarı  */
+}
+
+#quiz-box {
+  background-color: #5f6a77;
+  border-radius: 10px;
+  padding: 30px;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: #ecf0f1;
+}
+
+#quiz-box #header {
+  font-size: 22px;
+  font-weight: 600;
+  color: #ffd33d;
+  margin-bottom: 20px;
+}
+
+.option-list {
+  background-color: #7f8c8d;
+  border-radius: 8px;
+  padding: 15px;
+  margin-top: 15px;
+}
+
+.option-list .option {
+  background-color: #95a5a6;
+  border: 1px solid #7f8c8d;
+  color: #2c3e50;
+  padding: 12px 20px;
+  font-size: 18px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 8px;
+}
+
+.option-list .option:hover {
+  background-color: #f39c12;
+  color: #112b2c;
+}
+
+.option-list .option.correct {
+  background-color: #27ae60;
+  color: #fff;
+}
+
+.option-list .option.incorrect {
+  background-color: #e74c3c;
+  color: #fff;
+}
